@@ -10,13 +10,14 @@ source:
   sha256: 8f90fa36480f50109a8555a3e4debed69f70d8085545fd413190ae21a1455466
 
 build:
-  number: 8
+  number: 9
   script: "{{ PYTHON }} -m pip install . -vv"
   skip: True     # [win]
 
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
   host:
     - pip
     - python
